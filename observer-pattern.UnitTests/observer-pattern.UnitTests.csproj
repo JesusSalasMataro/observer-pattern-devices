@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\observer-pattern.Domain\observer-pattern.Domain.csproj" />
+    <ProjectReference Include="..\observer-pattern.Application\observer-pattern.Application.csproj" />
+    <ProjectReference Include="..\observer-pattern.Infrastructure\observer-pattern.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
