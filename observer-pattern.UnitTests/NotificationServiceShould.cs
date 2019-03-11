@@ -26,7 +26,7 @@ namespace observer_pattern.UnitTests
         {
             // ARRANGE
             AndroidService androidService = new AndroidService(_deviceConfiguration, _serviceBrokerMock.Object);
-            androidService.Attach(_notificationRepositoryMock.Object);
+            androidService.Subscribe(_notificationRepositoryMock.Object);
             Notification notification = new Notification();
 
             // ACT
@@ -42,8 +42,8 @@ namespace observer_pattern.UnitTests
             // ARRANGE
             AndroidService androidService = new AndroidService(_deviceConfiguration, _serviceBrokerMock.Object);
             IosService iosService = new IosService(_deviceConfiguration, _serviceBrokerMock.Object);
-            androidService.Attach(_notificationRepositoryMock.Object);
-            iosService.Attach(_notificationRepositoryMock.Object);
+            androidService.Subscribe(_notificationRepositoryMock.Object);
+            iosService.Subscribe(_notificationRepositoryMock.Object);
             Notification notification = new Notification();
 
             // ACT
@@ -59,7 +59,7 @@ namespace observer_pattern.UnitTests
         {
             // ARRANGE
             AndroidService androidService = new AndroidService(_deviceConfiguration, _serviceBrokerMock.Object);
-            androidService.Attach(_notificationRepositoryMock.Object);
+            androidService.Subscribe(_notificationRepositoryMock.Object);
 
             List<Subject> deviceServices = new List<Subject>
             {
@@ -86,8 +86,8 @@ namespace observer_pattern.UnitTests
             // ARRANGE
             AndroidService androidService = new AndroidService(_deviceConfiguration, _serviceBrokerMock.Object);
             IosService iosService = new IosService(_deviceConfiguration, _serviceBrokerMock.Object);
-            androidService.Attach(_notificationRepositoryMock.Object);
-            iosService.Attach(_notificationRepositoryMock.Object);
+            androidService.Subscribe(_notificationRepositoryMock.Object);
+            iosService.Subscribe(_notificationRepositoryMock.Object);
 
             List<Subject> deviceServices = new List<Subject>
             {

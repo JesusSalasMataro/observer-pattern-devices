@@ -11,7 +11,7 @@ namespace observerpattern.Domain
             _services = new List<Observer>();
         }
 
-        public void Attach(Observer service)
+        public void Subscribe(Observer service)
         {
             _services.Add(service);
         }

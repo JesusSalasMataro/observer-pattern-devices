@@ -15,7 +15,7 @@ namespace observerpattern.Application
 
             foreach (Subject deviceService in deviceServices)
             {
-                deviceService.Attach(notificationRepository);
+                deviceService.Subscribe(notificationRepository);
             }
         }
 
