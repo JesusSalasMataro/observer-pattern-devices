@@ -13,7 +13,7 @@ namespace observerpattern.Application
             _deviceServices = deviceServices;
             _notificationRepository = notificationRepository;
 
-            foreach (Subject deviceService in deviceServices)
+            foreach (Subject deviceService in _deviceServices)
             {
                 deviceService.Subscribe(notificationRepository);
             }
